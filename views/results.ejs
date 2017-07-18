@@ -1,0 +1,70 @@
+<% include partials/header %>
+<script src="results.js"></script>
+
+<h1>Sentiment Analysis Results</h1>
+
+<div class="analysisWrapper">
+
+    <div class="sentimentCard">
+
+        <div class="sentimentCardHeading">Score</div>
+        <div><%= data.sentiment.score %></div>
+
+        <div class="sentimentCardHeading">Comparative</div>
+        <div><%= data.sentiment.comparative %></div>
+
+        <div class="sentimentCardHeading">Important Words</div>
+        <div>
+          <% data.sentiment.words.forEach((word) => { %>
+            <%= word %>
+          <% }) %>
+        </div>
+
+        <div class="sentimentCardHeading">Positive</div>
+        <div>
+          <% data.sentiment.positive.forEach((pos) => { %>
+            <%= pos %>
+          <% }) %>
+        </div>
+
+        <div class="sentimentCardHeading">Negative</div>
+        <div>
+          <% data.sentiment.negative.forEach((neg) => { %>
+            <%= neg %>
+          <% }) %>
+        </div>
+
+        <div class="sentimentCardHeading">Text</div>
+        <div id="textArea">
+          <% data.sentiment.tokens.forEach((token) => { %>
+            <%= token %>
+          <% }) %>
+        </div>
+        <a id="toggleButton" onclick="toggleText()" href="javascript:void(0)">See Text</a>
+
+    </div>
+    <div class="freqCard">
+
+      <div class="sentimentCardHeading">Important Word Frequency</div>
+      <div>
+        <table>
+          <% data.freq.results.forEach((result) => { %>
+            <tr>
+              <td class="freqWord">
+              <%= result.word %>
+              </td>
+              <td class="freqCount">
+              <%= result.count %>
+              </td>
+            </tr>
+          <% }) %>
+        </table>
+      </div>
+
+    </div>
+
+</div>
+
+<div class="backLink"><a href="/">Search Again</a></div>
+
+<% include partials/footer %>
