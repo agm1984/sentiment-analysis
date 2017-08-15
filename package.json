@@ -9,11 +9,16 @@
   "author": "Adam Mackintosh",
   "license": "ISC",
   "dependencies": {
+    "advanced-sentiment": "^1.0.0",
     "body-parser": "^1.17.2",
+    "datasets-liu-negative-opinion-words-en": "^1.0.0",
+    "datasets-liu-positive-opinion-words-en": "^1.0.0",
     "ejs": "^2.5.6",
+    "empath-sentiment-analysis": "^1.0.7",
     "express": "^4.15.3",
     "freq": "^0.1.5",
     "request": "^2.81.0",
-    "sentiment": "^4.0.0"
+    "sentiment": "^4.0.0",
+    "string-search": "^1.2.0"
   }
 }

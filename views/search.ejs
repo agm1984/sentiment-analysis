@@ -2,13 +2,54 @@
 
 <h1>Sentiment Analyzer</h1>
 
-<div class="searchBox">
-  <h2>Enter text to gauge its emotional content</h2>
-  <form id='searchForm' action="/results" method="GET">
+<div id="wrapper">
+
+
+<div id="leftPane">
+  <h2>OPTIONS</h2>
+
+    <div id="garboWrapper">
+    <div id="optionsLeft">
+      <span class="optionText">Sentiment</span>
+      <span class="optionText">Word Frequency</span>
+      <span class="optionText">All</span>
+    </div>
+
+    <div id="optionsRight">
+      <div class="optionCheckBox">
+        <label class="switch">
+          <input type="checkbox" disabled>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="optionCheckBox">
+        <label class="switch">
+          <input type="checkbox" disabled>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="optionCheckBox">
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div> 
+  </div>
+</div>
+
+
+
+<div id="rightPane">
+  <h2>ENTER TEST CONTENT</h2>
+  <form id="searchForm" action="/results" method="GET">
 
     <textarea id="searchInput" name="search" placeholder="Enter post, article, etc..."></textarea>
     <input id="searchButton" type="submit" value="SUBMIT">
   </form>
+</div>
+
+</div>
 </div>
 
 <% include partials/footer %>
